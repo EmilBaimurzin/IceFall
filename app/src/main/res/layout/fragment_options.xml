@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/background07"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background03" />
+
+    <ImageView
+        android:layout_marginStart="10dp"
+        android:id="@+id/imageView2"
+        android:layout_width="280dp"
+        android:layout_height="400dp"
+        android:layout_marginBottom="140dp"
+        android:src="@drawable/options02"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:paddingEnd="18dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2">
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/musicSlider"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="43dp"
+            android:layout_marginEnd="37dp"
+            android:background="@drawable/music"
+            android:value="50"
+            android:layout_marginTop="120dp"
+            android:valueFrom="0"
+            android:valueTo="100"
+            app:tickColorActive="@android:color/transparent"
+            app:tickColorInactive="@android:color/transparent"
+            app:trackColor="@android:color/transparent" />
+
+        <LinearLayout
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="6dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.ice.game.core.library.CustomImageButton
+                android:id="@+id/yes"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/yes"/>
+
+            <com.ice.game.core.library.CustomImageButton
+                android:id="@+id/no"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/no01"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.ice.game.core.library.CustomImageButton
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/close"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <com.ice.game.core.library.CustomImageButton
+        android:id="@+id/ok"
+        android:layout_width="130dp"
+        android:layout_marginEnd="3dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ok"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/options"
+        android:layout_width="300dp"
+        android:layout_height="86dp"
+        android:layout_marginVertical="10dp"
+        android:src="@drawable/options"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

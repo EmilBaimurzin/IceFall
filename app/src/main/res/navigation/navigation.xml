@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.ice.game.ui.starting.FragmentStarting"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentIce"
+            app:destination="@id/fragmentIce" />
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentOptions"
+            app:destination="@id/fragmentOptions" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentIce"
+        android:name="com.ice.game.ui.ice.FragmentIce"
+        android:label="FragmentIce" >
+        <action
+            android:id="@+id/action_fragmentIce_to_dialogGameOver"
+            app:destination="@id/dialogGameOver" />
+        <action
+            android:id="@+id/action_fragmentIce_to_dialogPause"
+            app:destination="@id/dialogPause" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogGameOver"
+        android:name="com.ice.game.ui.dialogs.DialogGameOver"
+        android:label="DialogGameOver" >
+        <argument
+            android:name="scores"
+            app:argType="integer" />
+    </dialog>
+    <fragment
+        android:id="@+id/fragmentOptions"
+        android:name="com.ice.game.ui.options.FragmentOptions"
+        android:label="FragmentOptions" />
+    <dialog
+        android:id="@+id/dialogPause"
+        android:name="com.ice.game.ui.dialogs.DialogPause"
+        android:label="DialogPause" />
+</navigation>
